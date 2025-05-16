@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-    padding-top: 60px;
 }
 #navbar {
   display: flex;
@@ -13,10 +12,6 @@ body {
   padding: 10px;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 
 #liens {
@@ -53,11 +48,10 @@ body {
   height: 30px;
 }
 .container {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .presentation {
-  background: red;
   margin-top: 20px;
   display: flex;
 }
@@ -109,13 +103,14 @@ body {
 
 .articles {
   margin-top: 20px;
+  width: 100%;
 }
 
 .articles > .titre {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: red ;
+  color: red;
 }
 
 .articles .article {
@@ -127,37 +122,73 @@ body {
 .article .contenu {
   padding: 20px;
 }
-.article .bouton{
-    width: 100%;
-    background: blue;
-    color: white;
-    margin-top: 10px;
-    padding: 5px 15px;
-    border: none;
+.article .bouton {
+  width: 100%;
+  background: blue;
+  color: white;
+  margin-top: 10px;
+  padding: 5px 15px;
+  border: none;
 }
 
 .article .titre {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.article img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.article img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.article .titre .badge{
-    background-color :cyan;
-    padding: 2px 10px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-left: 10px;
+.article .titre .badge {
+  background-color: cyan;
+  padding: 2px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .articles .articles-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #navbar #liens {
+    display: none;
+  }
+
+  .articles {
+    width: 100%;
+  }
+
+  .articles .article {
+    width: 100%;
+  }
+
+  .articles .article img {
+  }
+  .presentation {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .presentation-text {
+    width: 100%;
+  }
+  .presentation-image {
+    width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
