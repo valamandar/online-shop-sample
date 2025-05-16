@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    padding-top: 60px;
+}
+#navbar {
+  display: flex;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#liens {
+  display: flex;
+}
+
+#navbar .lien {
+  list-style: none;
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px 15px;
+}
+
+#navbar .lien:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+}
+
+#navbar .lien a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo img {
+  width: 30px;
+  height: 30px;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+.presentation {
+  background: red;
+  margin-top: 20px;
+  display: flex;
+}
+
+.presentation-text {
+  width: 50%;
+  background: pink;
+  padding: 20px 40px;
+}
+.presentation-image {
+  width: 50%;
+  background: blue;
+}
+.presentation-image img {
+  width: 100%;
+  height: auto;
+}
+
+.presentation li {
+  list-style: none;
+}
+
+.presentation .titre {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.presentation .description {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.presentation a {
+  text-decoration: none;
+}
+
+.presentation .liens .lien {
+  margin: 5px; /* Restoring margin */
+  background: white;
+  padding: 5px 10px;
+  border-radius: 35px;
+}
+.presentation .liens .lien:hover {
+  background: #00000017;
+  color: white;
+}
+
+.articles {
+  margin-top: 20px;
+}
+
+.articles > .titre {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: red ;
+}
+
+.articles .article {
+  background: pink;
+  width: 180px;
+  border: 1px solid #000;
+}
+
+.article .contenu {
+  padding: 20px;
+}
+.article .bouton{
+    width: 100%;
+    background: blue;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+}
+
+.article .titre {
+    display: flex;
+    align-items: center;
+}
+
+.article img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article .titre .badge{
+    background-color :cyan;
+    padding: 2px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.articles .articles-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
