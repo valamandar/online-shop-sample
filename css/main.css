@@ -155,10 +155,26 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
+#btn-menu {
+  display: none;
+}
+
+#navbar-cache {
+  display: none;
+}
 
 @media (max-width: 800px) {
   body {
     overflow-x: hidden;
+  }
+
+  #btn-menu {
+    display: block;
+    background-color: white;
+    color: blue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
   }
 
   #navbar #liens {
@@ -190,5 +206,51 @@ body {
 
   .container {
     padding: 10px;
+  }
+
+  #navbar-cache {
+    display: none;
+    flex-direction: row;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: black;
+  }
+
+  #navbar-content {
+    background: white;
+    padding: 10px 20px;
+    height: 100%;
+    width: 300px;
+  }
+
+  #navbar-clicable {
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #navbar-cache .lien {
+    list-style: none;
+    margin: 5px;
+    background: white;
+    padding: 10px;
+    border-radius: 35px;
+  }
+
+  #navbar-cache .lien a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #navbar-cache #liens {
+    display: flex;
+    flex-direction: column;
   }
 }
