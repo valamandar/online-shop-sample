@@ -18,6 +18,20 @@
             border-radius: 100%;
             background-color: #ccc;
             cursor: pointer;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container-left {
+
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
         }
 
         .option-active {
@@ -39,20 +53,34 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Produit 1</h1>
-        <p>Description du produit 1.</p>
-
-        <div class="color-options">
-            <div data-image-url="../images/robe-orange.webp" class="option option-active"></div>
-            <div data-image-url="../images/robe-verte.png" class="option"></div>
-            <div data-image-url="../images/robe-bleue.png" class="option"></div>
-        </div>
+    <div class="">
         <form action="" method="get">
             <label for="my-color">Choisir</label>
             <input type="color" name="my-color" id="my-color">
         </form>
-        <img width="300" src="../images/1.webp" alt="Produit 1">
+        <h1>Produit 1</h1>
+        <p>Description du produit 1.</p>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="container-left">
+                <p id="color-option-name"></p>
+                <p id="color-option-description"></p>
+                <div class="color-options">
+                    <div data-name="Orange" data-description="Jolie robe orange !"
+                        data-image-url="../images/robe-orange.webp" class="option option-active"></div>
+                    <div data-name="Verte" data-description="Jolie robe verte !"
+                        data-image-url="../images/robe-verte.png" class="option"></div>
+                    <div data-name="Bleue" data-description="Jolie robe bleue !"
+                        data-image-url="../images/robe-bleue.png" class="option"></div>
+                </div>
+            </div>
+            <div class="container-right">
+                <img width="300" src="../images/1.webp" alt="Produit 1">
+
+            </div>
+        </div>
         <a href="http://localhost:8000/pay/v1/5ec6eb3c1dd867ce0fca10c1fb01d8e6935f27267b8b26848c35a0ef13ecf8cd?amount=10&currency=USD&reference=txn-001"
             target="_blank">
             Payer directement
@@ -68,32 +96,50 @@
         });
 
         const options = document.querySelectorAll('.option');
-
+        const colorOptionName = document.getElementById('color-option-name');
+        const colorOptionDescription = document.getElementById('color-option-description');
 
         function removeActiveClass() {
             options.forEach(option => option.classList.remove('option-active'));
         }
-        
+
         options[0].addEventListener('click', function () {
             removeActiveClass();
             this.classList.add('option-active');
             const imageUrl = this.getAttribute('data-image-url');
+            const name = this.getAttribute('data-name');
+            const description = this.getAttribute('data-description');
             document.querySelector('img').src = imageUrl;
+            this.style.backgroundImage = "url(" + imageUrl + ")";
+            colorOptionName.textContent = name;
+            colorOptionDescription.textContent = description;
         });
 
 
         options[1].addEventListener('click', function () {
-           removeActiveClass();
+            removeActiveClass();
             this.classList.add('option-active');
             const imageUrl = this.getAttribute('data-image-url');
+            const name = this.getAttribute('data-name');
+            const description = this.getAttribute('data-description');
             document.querySelector('img').src = imageUrl;
+            colorOptionName.textContent = name;
+            this.style.backgroundImage = "url(" + imageUrl + ")";
+
+            colorOptionDescription.textContent = description;
         });
 
         options[2].addEventListener('click', function () {
             removeActiveClass();
             this.classList.add('option-active');
             const imageUrl = this.getAttribute('data-image-url');
+            const name = this.getAttribute('data-name');
+            const description = this.getAttribute('data-description');
             document.querySelector('img').src = imageUrl;
+            colorOptionName.textContent = name;
+            this.style.backgroundImage = "url(" + imageUrl + ")";
+
+            colorOptionDescription.textContent = description;
         });
 
     </script>
