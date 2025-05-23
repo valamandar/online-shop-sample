@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit 1</title>
+
+    <style>
+        .color-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .option {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .option-active {
+            border: 2px dashed #0000006f;
+        }
+
+        .option:nth-child(1) {
+            background-color: orange;
+        }
+
+        .option:nth-child(2) {
+            background-color: green;
+        }
+
+        .option:nth-child(3) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Produit 1</h1>
+        <p>Description du produit 1.</p>
+
+        <div class="color-options">
+            <div data-image-url="../images/robe-orange.webp" class="option option-active"></div>
+            <div data-image-url="../images/robe-verte.png" class="option"></div>
+            <div data-image-url="../images/robe-bleue.png" class="option"></div>
+        </div>
+        <form action="" method="get">
+            <label for="my-color">Choisir</label>
+            <input type="color" name="my-color" id="my-color">
+        </form>
+        <img width="300" src="../images/1.webp" alt="Produit 1">
+        <a href="http://localhost:8000/pay/v1/5ec6eb3c1dd867ce0fca10c1fb01d8e6935f27267b8b26848c35a0ef13ecf8cd?amount=10&currency=USD&reference=txn-001"
+            target="_blank">
+            Payer directement
+        </a>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+    <script>
+        const myColorInput = document.getElementById('my-color');
+        myColorInput.addEventListener('change', function () {
+            document.body.style.backgroundColor = myColorInput.value;
+        });
+
+        const options = document.querySelectorAll('.option');
+
+
+        function removeActiveClass() {
+            options.forEach(option => option.classList.remove('option-active'));
+        }
+        
+        options[0].addEventListener('click', function () {
+            removeActiveClass();
+            this.classList.add('option-active');
+            const imageUrl = this.getAttribute('data-image-url');
+            document.querySelector('img').src = imageUrl;
+        });
+
+
+        options[1].addEventListener('click', function () {
+           removeActiveClass();
+            this.classList.add('option-active');
+            const imageUrl = this.getAttribute('data-image-url');
+            document.querySelector('img').src = imageUrl;
+        });
+
+        options[2].addEventListener('click', function () {
+            removeActiveClass();
+            this.classList.add('option-active');
+            const imageUrl = this.getAttribute('data-image-url');
+            document.querySelector('img').src = imageUrl;
+        });
+
+    </script>
+</body>
+
+</html>
