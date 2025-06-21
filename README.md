@@ -178,6 +178,17 @@ Pour que votre projet soit pris en compte, **merci de suivre scrupuleusement tou
 
 En cas de difficulté, contactez votre la COMMISSION **avant la deadline**.
 
+
+---
+
+
+## 💡 Comprendre Git et GitHub
+
+Cette vidéo vous explique les bases de Git et GitHub : création de dépôt, commits, push/pull, branches, etc.  
+Utile pour bien démarrer avec le versioning collaboratif.
+
+👉 [Regarder la vidéo sur YouTube](https://www.youtube.com/watch?v=V6Zo68uQPqE)
+
 ---
 ## 📄 Licence
 
