@@ -103,8 +103,10 @@ Pas de panique ! Voici comment transférer votre code existant dans ce dépôt :
 
 4. ➕ **Ajoutez le dépôt de CRIAGI comme destination secondaire (remote)**
 
-   ```bash
+    ```bash
    git remote add criagi https://github.com/criagi-upc/projet-final-etudiant.git
+   git fetch criagi
+   git merge criagi/main --allow-unrelated-histories
    ```
 
 ---
