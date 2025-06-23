@@ -53,7 +53,7 @@ Ce projet a pour but de [décrire l’objectif principal, par exemple : dévelop
 
 ```
 📦 nom-du-repo
-  ┣ 📂 project/                # Code source principal du projet
+  ┣ 📂 codebase/               # Code source principal du projet
   ┣ 📂 docs/                   # Documentation
   ┃ ┗ 📄 cahier-de-charge.pdf  # Cahier des charges au format PDF
   ┣ 📄 README.md               # Présentation du projet
