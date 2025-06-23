@@ -1,0 +1,68 @@
+# === ENVIRONNEMENTS VIRTUELS ===
+.env
+.venv/
+venv/
+env/
+*.env
+
+# Ne PAS ignorer le fichier d'exemple
+!.env.example
+
+# === FICHIERS COMPILÉS ===
+*.py[cod]
+__pycache__/
+*.class
+*.o
+*.so
+
+# === FICHIERS DE BUILD ===
+dist/
+build/
+out/
+target/
+*.egg-info/
+*.log
+
+# === NODE.JS ===
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# === PHP ===
+vendor/
+composer.lock
+
+# === JAVA ===
+*.jar
+*.war
+*.ear
+
+# === TESTS / COUVERTURE ===
+coverage/
+.nyc_output/
+coverage-final.json
+coverage.xml
+
+# === SYSTEME / OS ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === IDEs ===
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# === GIT ===
+.gitignore
+*.swp
+*~
+
+# === AUTRES (si nécessaire) ===
+logs/
+tmp/
+.cache/
+*.bak
