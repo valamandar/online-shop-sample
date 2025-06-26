@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- j'ai ajouté le lien AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Produit 1</title>
-
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
         .color-options {
             display: flex;
             gap: 10px;
@@ -53,40 +61,60 @@
 </head>
 
 <body>
-    <div class="">
-        <form action="" method="get">
-            <label for="my-color">Choisir</label>
-            <input type="color" name="my-color" id="my-color">
-        </form>
-        <h1>Produit 1</h1>
-        <p>Description du produit 1.</p>
-        <br>
-        <br>
-        <br>
-        <div class="container">
-            <div class="container-left">
-                <p id="color-option-name"></p>
-                <p id="color-option-description"></p>
-                <div class="color-options">
-                    <div data-name="Orange" data-description="Jolie robe orange !"
-                        data-image-url="../images/robe-orange.webp" class="option option-active"></div>
-                    <div data-name="Verte" data-description="Jolie robe verte !"
-                        data-image-url="../images/robe-verte.png" class="option"></div>
-                    <div data-name="Bleue" data-description="Jolie robe bleue !"
-                        data-image-url="../images/robe-bleue.png" class="option"></div>
+    <header>
+
+    </header>
+    <!-- j'ai ajouté le main , header et footer -->
+    <main>  
+        <div class="intro" data-aos="flip-up">
+            <form action="" method="get">
+                <label for="my-color">Choisir</label>
+                <input type="color" name="my-color" id="my-color">
+            </form>
+            <h1>Produit 1</h1>
+            <p>Description du produit 1.</p>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                <div class="container-left">
+                    <p id="color-option-name"></p>
+                    <p id="color-option-description"></p>
+                    <div class="color-options">
+                        <div data-name="Orange" data-description="Jolie robe orange !" data-image-url="../images/robe-orange.webp"
+                        class="option option-active"></div>
+                        <div data-name="Verte" data-description="Jolie robe verte !" data-image-url="../images/robe-verte.png"
+                        class="option"></div>
+                        <div data-name="Bleue" data-description="Jolie robe bleue !" data-image-url="../images/robe-bleue.png"
+                        class="option"></div>
                 </div>
             </div>
             <div class="container-right">
                 <img width="300" src="../images/1.webp" alt="Produit 1">
-
             </div>
         </div>
         <a href="http://localhost:8000/pay/v1/5ec6eb3c1dd867ce0fca10c1fb01d8e6935f27267b8b26848c35a0ef13ecf8cd?amount=10&currency=USD&reference=txn-001"
             target="_blank">
             Payer directement
         </a>
-    </div>
-
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                </div>
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>&copy; Vala MANDAR 2024-2025 - Tous droits réservés.</li>
+                    </ul>
+                </div>
+            </div>
+            </footer>
     <script src="./js/main.js"></script>
 
     <script>
@@ -144,5 +172,7 @@
 
     </script>
 </body>
-
+<script>
+    AOS.init();
+</script>
 </html>
